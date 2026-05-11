@@ -14966,27 +14966,7 @@ window.html2canvas=function(){return Promise.resolve(document.createElement("can
 'use strict';
 
 /* ─── SHARED AG-GRID THEME ─── */
-var sharedTheme = agGrid.themeQuartz.withParams({
-  accentColor: '#0E7B80',
-  backgroundColor: '#ffffff',
-  foregroundColor: '#181D1F',
-  headerBackgroundColor: '#F8F9FA',
-  headerTextColor: '#374151',
-  borderColor: '#E9ECEF',
-  rowBorder: true,
-  columnBorder: false,
-  rowHoverColor: 'rgba(0,0,0,0.03)',
-  selectedRowBackgroundColor: 'rgba(14,123,128,0.08)',
-  oddRowBackgroundColor: '#ffffff',
-  fontFamily: 'Lato, sans-serif',
-  fontSize: 14,
-  headerFontSize: 11,
-  headerFontWeight: 700,
-  wrapperBorderRadius: 8,
-  wrapperBorder: true,
-  spacing: 8,
-  cellHorizontalPadding: 16,
-});
+var sharedTheme = 'legacy';
 
 /* ─── TARGETS PERFORMANCE DATA ─── */
 const TARGETS_DATA = [
@@ -20538,6 +20518,7 @@ function initDailyBGrid(days, month, activeDay, containerEl) {
 
   // ── Create grid ───────────────────────────────────────────────────────────
   _dailyBGridApi = AG.createGrid(wrapper, {
+    theme: 'legacy',
     columnDefs: colDefs,
     rowData: _getDBVisibleRows(),
     headerHeight: 50,
@@ -21686,6 +21667,7 @@ function initDailyHGrid(days, activeMonth, activeDay, containerEl) {
 
   // ── Create grid ───────────────────────────────────────────────────────────
   _dailyHGridApi = AG.createGrid(wrapper, {
+    theme: 'legacy',
     columnDefs: colDefs,
     rowData: rowData,
     headerHeight: 54,
@@ -21884,6 +21866,7 @@ function initCoReportGrid(days, containerEl) {
 
   // ── create grid ─────────────────────────────────────────────────────────
   _coReportGridApi = AG.createGrid(wrapper, {
+    theme: 'legacy',
     columnDefs: colDefs,
     rowData: rowData,
     rowHeight: 44,
@@ -22132,6 +22115,7 @@ function initDailyRevGrid(days, containerEl) {
 
   // ── create grid ───────────────────────────────────────────────────────────
   _dailyRevGridApi = AG.createGrid(wrapper, {
+    theme: 'legacy',
     columnDefs: colDefs,
     rowData: rowData,
     rowHeight: 42,
@@ -26352,6 +26336,7 @@ var _tourOpsGridApi = null;
   ];
 
   _tourOpsGridApi = AG.createGrid(wrapper, {
+    theme: 'legacy',
     columnDefs: colDefs,
     rowData: TO_OPS_DATA,
     rowHeight: 48,
